@@ -1,0 +1,15 @@
+function fu=integrales_impropias(f,a,b,n)
+if b<a
+  msgID = 'INTEGRALES_IMPROPIAS:condicion';
+  msg = 'Error';  
+  error(msgID,msg);
+  
+else
+l_sup=1/a;
+l_inf=1/b; 
+syms x t;
+fun =(1/t^2)*subs(f,1/t);
+fu=matlabFunction(fun)
+fu(l_sub)
+
+end
